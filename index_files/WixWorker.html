@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<!-- saved from url=(1198)https://www.mymobileapp.online/WixWorker?lang=es&dateNumberFormat=es-es&isPrimaryLanguage=true&pageId=masterPage&compId=tpaWorker_29&viewerCompId=tpaWorker_29&siteRevision=1160&viewMode=site&deviceType=desktop&locale=es&tz=America%2FBogota&regionalLanguage=es&endpointType=worker&instance=n9ufHZykYI98w0LLQ43prkSpFF_ZJiW008u26XgwkwA.eyJpbnN0YW5jZUlkIjoiYjEzZjAyODUtNGMxMS00ZGE2LTljNzEtYmM0ZmMzMGMzNGYyIiwiYXBwRGVmSWQiOiIxNDE3ZmQyNy0zN2ZhLTc5NzItNmRhMy05ZmYxNWY0NzM0MGEiLCJzaWduRGF0ZSI6IjIwMjUtMDctMDRUMDQ6NTY6MDIuNTMxWiIsImRlbW9Nb2RlIjpmYWxzZSwiYWlkIjoiYWU3Mzg4MjYtNjQ2ZC00YmUzLWI2MWItYmQyZmFkOTQ4NjZhIiwic2l0ZU93bmVySWQiOiI3NTZiYTg3MC04MDc0LTRkYTAtOTI1MS04NzVkMmFmNDBkYzgiLCJicyI6IjlnbGFJMTg1cngxRWxjWlNoQVkyZGRaMHdtblNKLUNlM3E5RmJ4VEhFMFEiLCJzY2QiOiIyMDE5LTAzLTIyVDIyOjQxOjI2LjAzMFoifQ&currency=COP&currentCurrency=COP&commonConfig=%7B%22brand%22%3A%22wix%22%2C%22host%22%3A%22VIEWER%22%2C%22bsi%22%3A%2294557313-72b0-4a33-9c22-42a7de181250%7C1%22%2C%22siteRevision%22%3A%221160%22%2C%22renderingFlow%22%3A%22NONE%22%2C%22language%22%3A%22es%22%2C%22locale%22%3A%22es-es%22%2C%22BSI%22%3A%2294557313-72b0-4a33-9c22-42a7de181250%7C1%22%7D&currentRoute=.%2F&vsi=bae645ec-8724-412b-91b0-10bf92430b05 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title></title>
+    <script src="./jquery-3.3.1.min.js.descarga" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<style wix-style="">.Title{ font:normal normal normal 68px/1.4em dinneuzeitgroteskltw01-_812426,sans-serif; } .Menu{ font:normal normal normal 16px/1.4em din-next-w01-light,sans-serif; } .Page-title{ font:normal normal normal 34px/1.4em din-next-w01-light,sans-serif; } .Heading-XL{ font:normal normal normal 60px/1.4em din-next-w01-light,sans-serif; } .Heading-L{ font:normal normal normal 34px/1.4em din-next-w01-light,sans-serif; } .Heading-M{ font:normal normal normal 25px/1.4em din-next-w01-light,sans-serif; } .Heading-S{ font:normal normal normal 21px/1.4em futura-lt-w01-light,sans-serif; } .Body-L{ font:normal normal normal 20px/1.4em din-next-w01-light,sans-serif; } .Body-M{ font:normal normal normal 17px/1.4em din-next-w01-light,sans-serif; } .Body-S{ font:normal normal normal 14px/1.4em din-next-w01-light,sans-serif; } .Body-XS{ font:normal normal normal 12px/1.4em din-next-w01-light,sans-serif; } }</style><link type="text/css" rel="stylesheet" href="./fonts.mjtd3c8n2u3hi9zejjn2.css"><link type="text/css" rel="stylesheet" href="./google.llj7u9yvj7k0dtoedoeb.css"><link type="text/css" rel="stylesheet" href="./wixMadefor.lhwa62d5phtg3i69bmvs.css"><style>:focus {
+    outline: none;
+}
+
+.js-focus-visible .focus-visible:focus,
+.js-focus-visible .focus-visible:focus ~ .wixSdkShowFocusOnSibling
+{
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 1px 2px #3899EC;
+}
+</style><script src="./focus-visible.min.js.descarga" id="dynamic_script_FOCUS_VISIBLE"></script></head>
+<body class="js-focus-visible">
+    <script type="text/javascript">
+        $(document).ready(function () {
+            if (typeof Wix != 'undefined') {
+                setPublishedListener();
+            } else {
+                $.ajax({
+                    type: 'GET', url: 'https://static.parastorage.com/services/js-sdk/1.425.0/js/wix.min.js',
+                    dataType: 'script',
+                    async: true,
+                    complete: function (jqXHR, textStatus) {
+                        setPublishedListener();
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                        window.gotMenuForMma = false;
+                    }
+                });
+            }
+        });
+
+        function setPublishedListener() {
+            Wix.Worker.addEventListener(Wix.Events.SITE_PUBLISHED, function (page) {
+                saveMenu();
+            });
+        }
+
+        function saveMenu() {
+            var url = 'https://www.mymobileapp.online/WixWorker/SaveMenu' + window.location.search;
+            
+            Wix.Worker.getSiteMap(function (sitePages) {
+                $.ajax({
+                    type: 'POST',
+                    url: url,
+                    data: JSON.stringify(sitePages),
+                    accept: "application/json",
+                    async: true,
+                    complete: function (jqXHR, textStatus) {
+                        window.gotMenuForMma = true;
+                    },
+                    error: function (xhr, textStatus, errorThrown) {
+                       window.gotMenuForMma = false;
+                       console('Could not publish menu to My Mobile App');
+                    }
+                });
+            });
+
+        }
+      
+    </script>
+
+
+</body></html>
